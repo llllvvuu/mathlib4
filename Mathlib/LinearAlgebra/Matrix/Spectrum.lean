@@ -180,7 +180,7 @@ lemma eigenvalues_eq_iff_charpoly_eq :
   · unfold eigenvalues
     simp_rw [eigenvalues₀_eq_charpoly_roots_sort_getI, h]
 
-theorem polynomial_splits_charpoly (hA : A.IsHermitian) :
+theorem charpoly_splits (hA : A.IsHermitian) :
     A.charpoly.Splits (RingHom.id 𝕜) :=
   Polynomial.splits_iff_card_roots.mpr (by simp [hA.charpoly_roots_eq_eigenvalues])
 
